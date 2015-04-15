@@ -36,7 +36,7 @@ function faucet(site_id) {
 
 	if (window.localStorage["timeout_" + site] == null || window.localStorage["timeout_" + site] < Date.now()) {
 		console.log("reached faucet reset -- load again")
-		window.localStorage["timeout_" + site] = Date.now() + (1000 * 60 * 60);
+		window.localStorage["timeout_" + site] = Date.now() + (1000 * 60 * 60 * 24);
 		$(".rotator .embed").html("<iframe src='" + sites[site_id] + "'>");
 	} else {
 		current_site++;
