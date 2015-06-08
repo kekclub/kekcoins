@@ -4,17 +4,18 @@
 var sites;
 var coinid;
 
+// TODO: improve animations and make animations for returning home
 document.addEventListener("DOMContentLoaded", function() {
 	setTimeout(function() {
 		$(".top").css('transform', 'none');
 	}, 500);
 	setTimeout(function() {
 		$(".coin img").css('opacity', '1');
-	}, 900);
+	}, 800);
 	setTimeout(function() {
 		$("footer").css('transform', 'none');
 		$(".coin img").css('transition-duration', '0.3s');
-	}, 1200);
+	}, 950);
 });
 
 function loadFaucet() {
