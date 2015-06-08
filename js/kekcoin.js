@@ -13,11 +13,11 @@ function loadFaucet() {
 
 	// TODO: Store faucets as JSON and have custom timeouts for each
 	if (coinid == "Dogecoin") {
-		sites = ["http://testssidddng.fucfffkyou", "http://dogffe.dassdfkek.clubbbb", "https://gooossasdfsdddogle.com"];
+		sites = ["http://dogetest11.test", "http://dogetest22.test", "http://dogetest33.test"];
 	} else if (coinid == "Bitcoin") {
-		sites = ["http://tessssnaaik.io", "http://topffff.kek.cluab", "http://duckfdffffuckgo.com", "http://disssaak.dick.dick"];
+		sites = ["http://bittest11.test", "http://bittest22.test", "http://bittest33.test"];
 	} else if (coinid == "Litecoin"){
-		sites = ["http://kekassddddsads.nicffeme/ddd", "http://depiaaaaaffffcs.kek"];
+		sites = ["http://litetest11.test", "http://litetest22.test", "http://litetest33.test"];
 	}
 
 	setTimeout(function() {
@@ -36,14 +36,14 @@ function faucet(site_id) {
 
 	if (window.localStorage["timeout_" + site] == null || window.localStorage["timeout_" + site] < Date.now()) {
 		window.localStorage["timeout_" + site] = Date.now() + (1000 * 60 * 60);
-		$(".empty").css("opacity", "0");
+		$(".empty").css("display", "none");
 		$(".rotator .embed").html("<iframe width='100%' height='400px' src='" + sites[site_id] + "'>");
 	} else {
 		current_site++;
 		if (current_site > sites.length - 1) {
 			$(".next").css("display", "none");
 			$(".embed").css("display", "none");
-			$(".empty").css("opacity", "1");
+			$(".empty").css("display", "block");
 			return;
 		};
 		faucet(current_site);
