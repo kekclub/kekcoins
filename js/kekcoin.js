@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}, 900);
 	setTimeout(function() {
 		$("footer").css('transform', 'none');
+		$(".coin img").css('transition-duration', '0.3s');
 	}, 1200);
 });
 
