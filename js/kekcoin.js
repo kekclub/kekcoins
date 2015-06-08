@@ -1,3 +1,6 @@
+// I am sorry for the spaghetti ;-;
+//    -installgen2
+
 var sites;
 var coinid;
 
@@ -8,6 +11,7 @@ function loadFaucet() {
 		$(this).css('transform', 'rotateY(180deg)')
 	}
 
+	// TODO: Store faucets as JSON and have custom timeouts for each
 	if (coinid == "Dogecoin") {
 		sites = ["http://testssidddng.fucfffkyou", "http://dogffe.dassdfkek.clubbbb", "https://gooossasdfsdddogle.com"];
 	} else if (coinid == "Bitcoin") {
@@ -19,7 +23,7 @@ function loadFaucet() {
 	setTimeout(function() {
 		$(".rotator").css('transform', 'scale(1)');
 		$(".coin img").css('display', 'none');
-	}, 200);
+	}, 250);
 
 	faucet(0)
 }
