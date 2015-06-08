@@ -4,6 +4,18 @@
 var sites;
 var coinid;
 
+document.addEventListener("DOMContentLoaded", function() {
+	setTimeout(function() {
+		$(".top").css('transform', 'none');
+	}, 500);
+	setTimeout(function() {
+		$(".coin img").css('opacity', '1');
+	}, 900);
+	setTimeout(function() {
+		$("footer").css('transform', 'none');
+	}, 1200);
+});
+
 function loadFaucet() {
 	if ($(this).attr("class") != "next") {
 		coinid = $(this).attr("id");
@@ -13,11 +25,11 @@ function loadFaucet() {
 
 	// TODO: Store faucets as JSON and have custom timeouts for each
 	if (coinid == "Dogecoin") {
-		sites = ["http://dogetest11.test", "http://dogetest22.test", "http://dogetest33.test"];
+		sites = ["http://dogetest111.test", "http://dogetest222.test", "http://dogetest333.test"];
 	} else if (coinid == "Bitcoin") {
-		sites = ["http://bittest11.test", "http://bittest22.test", "http://bittest33.test"];
+		sites = ["http://bittest111.test", "http://bittest222.test", "http://bittest333.test"];
 	} else if (coinid == "Litecoin"){
-		sites = ["http://litetest11.test", "http://litetest22.test", "http://litetest33.test"];
+		sites = ["http://litetest111.test", "http://litetest222.test", "http://litetest333.test"];
 	}
 
 	setTimeout(function() {

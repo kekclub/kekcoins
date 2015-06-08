@@ -10,6 +10,8 @@ body
 .top
 	background: $background2
 	box-shadow: 0 3px 7px rgba(0,0,0, 0.54)
+	transform: translatey(100vh)
+	transition-duration: 0.4s
 	height: 200px
 	margin-top: 25px
 	width: 100%
@@ -26,9 +28,10 @@ body
 	box-shadow: 0 3px 7px rgba(0,0,0, 0.54)
 	margin-top: 50px
 	transition-duration: 0.5s
+	opacity: 0
 
 	&:hover
-		transform: scale(1.1)
+		transform: scale(1.2)
 
 .rotator
 	transform: scale(0)
@@ -55,6 +58,8 @@ a
 footer
 	background: $background2
 	box-shadow: 0 2px 7px rgba(0,0,0, 0.54)
+	transform: translateX(100vw)
+	transition-duration: 0.5s
 	padding-left: 10px
 	position: fixed
 	bottom: 15px
