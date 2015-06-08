@@ -49,6 +49,7 @@ function faucet(site_id) {
 	console.log(site);
 
 	if (window.localStorage["timeout_" + site] == null || window.localStorage["timeout_" + site] < Date.now()) {
+		// TODO: different timeouts for each site
 		window.localStorage["timeout_" + site] = Date.now() + (1000 * 60 * 60);
 		$(".empty").css("display", "none");
 		$(".rotator .embed").html("<iframe width='100%' height='400px' src='" + sites[site_id] + "'>");
