@@ -1,11 +1,15 @@
+$background1: #127C92
+$background2: #32A8C1
+
 body
 	text-align: center
-	background: #1565c0
+	background: $background1
 	color: rgba(20,20,20, 0.87)
+	overflow-y: scroll
 
 .top
-	background: #2196f3
-	box-shadow: 0px 3px 7px rgba(0,0,0, 0.54)
+	background: $background2
+	box-shadow: 0 3px 7px rgba(0,0,0, 0.54)
 	height: 200px
 	margin-top: 25px
 	width: 100%
@@ -19,7 +23,7 @@ body
 	height: 120px
 	height: 120px
 	border-radius: 150px
-	box-shadow: 0px 3px 7px rgba(0,0,0, 0.54)
+	box-shadow: 0 3px 7px rgba(0,0,0, 0.54)
 	margin-top: 50px
 	transition-duration: 0.4s
 
@@ -30,8 +34,37 @@ body
 	transform: scale(0)
 	transition-duration: 0.4s
 
-	background: #2196f3
-	box-shadow: 0px 3px 7px rgba(0,0,0, 0.54)
+	background: $background2
+	box-shadow: 0 3px 7px rgba(0,0,0, 0.54)
 	border-radius: 5px
 	margin: 50px
 	width: calc(100% - 100px)
+
+a
+	color: rgba(0,0,0, 0.54)
+	text-decoration: underline
+
+.next
+	width: 75px
+	border-radius: 3px
+	margin: 7px auto
+	cursor: pointer
+	box-shadow: 0 2px 3px rgba(0,0,0, 0.54)
+	background: $background1
+
+.empty
+	transition-duration: 0.8s
+
+footer
+	background: $background2
+	box-shadow: 0 2px 7px rgba(0,0,0, 0.54)
+	padding-left: 10px
+	position: fixed
+	bottom: 15px
+	left: 0
+	width: 100%
+	text-align: left
+
+	@media screen and (max-width: 600px)
+		span
+			display: none

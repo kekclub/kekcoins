@@ -1,32 +1,28 @@
 var sites;
+var coinid;
 
-$(".coin img").click(function() {
-	var coinid = $(this).attr("id");
-	$(".rotator h2").text(coinid + ' faucets')
-
-	if (coinid == "Dogecoin") {
-		sites = ["doge.doge.doge", "doge.kek.club", "https://gogle.com"];
-	} else if (coinid == "Bitcoin") {
-		sites = ["http://bitcoin.org", "http://top.kek.club", "http://duckduckgo.com"];
-	} else {
-		sites = ["http://kekasdasdasdasdads", "dasdads"];
+function loadFaucet() {
+	if ($(this).attr("class") != "next") {
+		coinid = $(this).attr("id");
+		$(".rotator h2").text(coinid + ' faucets')
+		$(this).css('transform', 'rotateY(180deg)')
 	}
 
-	$(this).css({
-		'transform': 'rotateY(180deg)',
-	})
+	if (coinid == "Dogecoin") {
+		sites = ["http://testssidddng.fucfffkyou", "http://dogffe.dassdfkek.clubbbb", "https://gooossasdfsdddogle.com"];
+	} else if (coinid == "Bitcoin") {
+		sites = ["http://tessssnaaik.io", "http://topffff.kek.cluab", "http://duckfdffffuckgo.com", "http://disssaak.dick.dick"];
+	} else if (coinid == "Litecoin"){
+		sites = ["http://kekassddddsads.nicffeme/ddd", "http://depiaaaaaffffcs.kek"];
+	}
 
 	setTimeout(function() {
-		$(".rotator").css({
-			'transform': 'scale(1)',
-		});
-		$(".coin img").css({
-			'display': 'none',
-		});
+		$(".rotator").css('transform', 'scale(1)');
+		$(".coin img").css('display', 'none');
 	}, 200);
 
 	faucet(0)
-});
+}
 
 var current_site = 0;
 function faucet(site_id) {
@@ -35,12 +31,20 @@ function faucet(site_id) {
 	console.log(site);
 
 	if (window.localStorage["timeout_" + site] == null || window.localStorage["timeout_" + site] < Date.now()) {
-		console.log("reached faucet reset -- load again")
-		window.localStorage["timeout_" + site] = Date.now() + (1000 * 60 * 60 * 24);
-		$(".rotator .embed").html("<iframe src='" + sites[site_id] + "'>");
+		window.localStorage["timeout_" + site] = Date.now() + (1000 * 60 * 60);
+		$(".empty").css("opacity", "0");
+		$(".rotator .embed").html("<iframe width='100%' height='400px' src='" + sites[site_id] + "'>");
 	} else {
 		current_site++;
-		if (current_site > sites.length - 1) return;
+		if (current_site > sites.length - 1) {
+			$(".next").css("display", "none");
+			$(".embed").css("display", "none");
+			$(".empty").css("opacity", "1");
+			return;
+		};
 		faucet(current_site);
 	}
 }
+
+$(".coin img").click(loadFaucet)
+$(".next").click(loadFaucet)
