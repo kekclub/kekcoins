@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	setTimeout(function() {
 		$("footer").css('transform', 'none');
 		$(".coin img").css('transition-duration', '0.3s');
-	}, 1200);
+	}, 1300);
 });
 
 function loadFaucet() {
