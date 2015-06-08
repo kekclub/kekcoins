@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	}, 500);
 	setTimeout(function() {
 		$(".coin img").css('opacity', '1');
-	}, 800);
+	}, 900);
 	setTimeout(function() {
 		$("footer").css('transform', 'none');
 		$(".coin img").css('transition-duration', '0.3s');
-	}, 950);
+	}, 1200);
 });
 
 function loadFaucet() {
